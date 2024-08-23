@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Merriweather:ital,wght@0,400;1,400;1,700&family=Poppins&display=swap');
+
+:root {
+    /* -------Color--------- */
+    --primary: #004C77;  /*Heading*/
+    --secondary: #62B9CB; /*Secondary Text*/
+    --thirdly: #ffae00; /*Hover*/
+    --cta: #C74143; /*Action*/
+    --lightest: #ffffff; /*Background*/
+    --light: #D8CFC4; /*Light Border*/
+    --dark: #b1afaf; 
+    --darkest: #000000;
+    /* --------FONT---------- */
+    --logo: "Merriweather", serif;
+    --heading: "Merriweather Sans", sans-serif;
+    --body: "Poppins", sans-serif;
+    /* --------SPACING-------- */
+    --lg: 32px;
+    --md: 16px;
+    --sm: 8px;
+    /* ///////////////////////// */
+    --ls-lg: 0.063rem;
+    --ls-md: 0.042rem;
+    --ls-sm: 0.025rem;
+    /* ---------FONT SIZE-------- */
+    --xxLarge: 76px;
+    --xLarge: 48px;
+    --large: 32px;
+    --medieum: 24px;
+    --icon: 20px;
+    --small: 16px;
+    --btn: 14px;
+    --xSmall: 11px;
+    
+}
+
+/* STYLE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    font-family: var(--body);
+    color: var(--dark);
+}
+
+/* --------Header---------- */
+
+.header {
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 var(--md);
+}
+
+.hero .hero-content, .hero-scm {
+    display: inline-flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+.hero-content .hero-info,
+.hero-scm .scm-icon {
+    padding: var(--sm);
+    font-family: var(--body);
+    font-size: var(--xSmall);
+    font-weight: 800;
+    color: var(--light);
+}
+.hero-info span {
+    font-size: var(--Xsmall);
+    padding: var(--sm);
+}
+
+
+
+.scm-icon span{
+    font-size: var(--icon);
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+/* ==========Hover SCM=========== */
+
+.scm-icon #facebook:hover {color: #4267B2;}
+.scm-icon #instagram:hover {color: #C13584;}
+.scm-icon #twitter:hover {color: #000000;}
+.scm-icon #youtube:hover {color: #FF0000;}
+
+.scm-icon #facebook:active {color: #a9b6d1; transition: .01s;}
+.scm-icon #instagram:active {color: #FCAF45; transition: .01s;}
+.scm-icon #twitter:active {color: #3158d8; transition: .01s;}
+.scm-icon #youtube:active {color: #ad0101; transition: .01s;}
+
+
+/* ----------------------NAVBAR----------------------- */
+
+.navbar {
+    width: 100%;
+    height: 72px;
+    padding: 0 var(--md);
+    margin: 0 var(--sm);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.navbar #logo {
+    font-family: var(--logo);
+    font-size: var(--large);
+    font-weight: 700;
+    font-style: italic;
+    color: var(--thirdly);
+}
+
+.navbar .nav-content {
+    width: 42%;
+    /* background-color: yellow; */
+}
+
+.navbar .nav-content .nav-item {
+    padding: 0 var(--md);
+    font-family: var(--heading);
+    font-size: var(--small);
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--lightest);
+    letter-spacing: var(--ls-sm);
+    text-transform: uppercase;
+    transition: .2s ease-out;
+}
+
+.navbar #nav-cta {
+    width: 120px;
+    height: 42px;
+    padding: var(--sm);
+    margin-right: var(--sm);
+    border: var(--ls-lg) solid var(--dark);
+    border-radius: var(--sm);
+    outline: none;
+    font-family: var(--heading);
+    font-size: var(--btn);
+    font-weight: 700;
+    text-align: center;
+    color: var(--light);
+    background-color: var(--thirdly);
+    transition: .2s ease-out;
+}
+
+/* ===================NAVBAR ACTION==================== */
+
+.navbar .nav-content a:hover{
+    color: var(--primary);
+}
+
+.navbar #nav-cta:hover{
+    color: var(--thirdly);
+    border: var(--ls-lg) solid var(--thirdly);
+    border-radius: none;
+    background-color: var(--lightest);
+}
+.navbar #nav-cta:active {
+    background-color: var(--light);
+    transition: .01s;
+}
+
+/* --------------------Home--------------------------------- */
+.home {
+    width: 100%;
+    height: 100vh;
+    background: url("/images/Home\ background.jpg")no-repeat;
+    background-color: #00000080;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: darken;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.home .home-container {
+    /* background-color: yellow; */
+    text-align: center;
+    width: 55%;
+    padding: var(--md) 0;
+    margin-top: var(--large);
+}
+
+#home-title {
+    font-family: var(--heading);
+    font-size: var(--xxLarge);
+    font-weight: 700;
+    letter-spacing: var(--ls-sm);
+    text-transform: capitalize;
+    padding: var(--md) 0;
+    color: var(--lightest);
+}
+
+#home-text {
+    font-family: var(--body);
+    font-size: var(--small);
+    font-weight: 400;
+    letter-spacing: var(--ls-md);
+    line-height: 1.6;
+    color: var(--light);
+    margin-bottom: var(--md);
+}
+#bookNow-span {
+    color: var(--thirdly);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#discover-btn {
+    width: 120px;
+    height: 42px;
+    padding: var(--sm);
+    border: var(--ls-lg) solid var(--dark);
+    border-radius: var(--sm);
+    outline: none;
+    font-family: var(--heading);
+    font-size: var(--btn);
+    font-weight: 700;
+    text-align: center;
+    color: var(--light);
+    background-color: var(--thirdly);
+    transition: .2s ease-out;
+}
+
+.home-cta #bookNow-btn {
+    margin-left: var(--sm);
+    color: var(--lightest);
+    font-size: var(--small);
+    font-weight: 400;
+}
+
+/*@@@@@@@@@@@@@@@ RESPONSIVE STYLE @@@@@@@@@@@ */
+@media (max-width: 575.98px) { 
+    /* Extra Small Devices */
+    /* Styles for mobile phones */
+  }
+  
+  @media (min-width: 576px) and (max-width: 767.98px) { 
+    /* Small Devices */ /* Styles for larger mobile phones and small tablets */
+
+  }
+  
+  @media (min-width: 768px) and (max-width: 991.98px) { 
+    /* Medium Devices */ /* Styles for tablets and small desktops */
+
+  }
+  
+  @media (min-width: 992px) and (max-width: 1199.98px) { 
+    /* Large Devices */ /* Styles for desktops */
+
+  }
+
